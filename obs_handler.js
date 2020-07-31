@@ -35,6 +35,7 @@ function main(websocket) {
     }, intervalMS);
 }
 
+await new Promise(r => setTimeout(r, 10000));
 const obs = new OBSWebSocket();
 obs.connect({ address: 'localhost:4444' }, (error) => {
     console.log(error);
